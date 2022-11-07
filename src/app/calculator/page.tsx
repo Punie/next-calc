@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <main className="grid place-content-center p-6">
       <div className="grid grid-cols-4 gap-6 text-5xl">
-        <div className="col-span-4 bg-gray-300 text-gray-900 rounded-xl p-4 text-right">
+        <div className="col-span-4 bg-gray-600 text-gray-50 dark:bg-gray-300 dark:text-gray-900 rounded-xl p-4 text-right">
           {operation.current
             ? operation.current.toFixed(Math.max(operation.decimalPoint - 1, 0))
             : operation.result}
@@ -83,7 +83,7 @@ export default function Home() {
               return (
                 <button
                   onClick={onReset}
-                  className="grid place-content-center w-24 h-24 rounded-full bg-gray-400 hover:bg-gray-300 active:bg-gray-200 text-gray-900"
+                  className="grid place-content-center w-24 h-24 rounded-full bg-gray-600 hover:bg-gray-500 active:bg-gray-400 text-gray-50 dark:bg-gray-400 dark:hover:bg-gray-300 dark:active:bg-gray-200 dark:text-gray-900"
                 >
                   C
                 </button>
@@ -96,7 +96,7 @@ export default function Home() {
               return (
                 <button
                   onClick={onDigit(button.value)}
-                  className="grid place-content-center w-24 h-24 rounded-full bg-gray-700 hover:bg-gray-600 active:bg-gray-500"
+                  className="hover:bg-gray:300 active:bg-gray:400 grid place-content-center w-24 h-24 rounded-full bg-gray-200 hover:bg-gray-300 active:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:active:bg-gray-500"
                 >
                   {button.value}
                 </button>
@@ -108,8 +108,8 @@ export default function Home() {
                   onClick={onOperator(button.value)}
                   className={`grid place-content-center w-24 h-24 rounded-full ${
                     operation.operator === button.value
-                      ? 'bg-gray-50 text-orange-400'
-                      : 'bg-orange-400 hover:bg-orange-300'
+                      ? 'bg-gray-700 dark:bg-gray-50 text-orange-400'
+                      : 'bg-orange-400 hover:bg-orange-300 text-gray-50'
                   }`}
                 >
                   {operatorIcon[button.value]}
@@ -120,7 +120,7 @@ export default function Home() {
               return (
                 <button
                   onClick={onEqual}
-                  className="grid place-content-center w-24 h-24 rounded-full bg-orange-400 hover:bg-orange-300"
+                  className="grid place-content-center w-24 h-24 rounded-full bg-orange-400 hover:bg-orange-300 active:bg-orange-200 text-gray-50"
                 >
                   <TbEqual />
                 </button>
@@ -130,7 +130,7 @@ export default function Home() {
               return (
                 <button
                   onClick={onComa}
-                  className="grid place-content-center w-24 h-24 rounded-full bg-gray-700 hover:bg-gray-600 active:bg-gray-500"
+                  className="grid place-content-center w-24 h-24 rounded-full bg-gray-200 hover:bg-gray-300 active:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:active:bg-gray-500"
                 >
                   ,
                 </button>
