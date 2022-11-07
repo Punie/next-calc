@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.exclude": {
+    "**/.yarn": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "prettier.documentSelectors": ["**/*.{cjs,mjs,ts,tsx,md,mdx,json,yaml,yml}"],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
