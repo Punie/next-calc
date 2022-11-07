@@ -13,9 +13,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
 
-      <body className="min-h-screen bg-gray-900 text-gray-50 grid place-content-center">
-        {children}
-      </body>
+      <body className="min-h-screen bg-gray-900 text-gray-50">{children}</body>
     </html>
   );
 }
